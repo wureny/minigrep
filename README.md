@@ -6,6 +6,9 @@ A minimalist grep written in Rust
 ### For Unix/Linux
 Run the following command in your terminal:
 
+### For Windows
+Download the minigrep.exe from the Releases page and copy it to a directory in your PATH.
+
 ```bash
 curl -sSL https://raw.githubusercontent.com/yourusername/minigrep/main/install.sh | sh
 ```
