@@ -1,0 +1,1 @@
+/Users/wurenyu/Library/Mobile\ Documents/com~apple~CloudDocs/Rust/learn_rust/minigrep/target/debug/libminigrep.rlib: /Users/wurenyu/Library/Mobile\ Documents/com~apple~CloudDocs/Rust/learn_rust/minigrep/src/lib.rs
