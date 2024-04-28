@@ -22,6 +22,5 @@ fn main() {
         println!("Application error: {e}");
         process::exit(1);
     }
-    dbg!(args);
 }
 
