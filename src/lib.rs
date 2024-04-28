@@ -24,12 +24,17 @@ pub fn run(config : Config) ->Result<(),Box<dyn Error>>{
         for line in results {
             println!("{line}");
         }
-        if env::var("ROWSOFFILE").unwrap() == "1" {
-            println!("ROWS OF FILE: {r1}")
+        if let Some(val) = env::var("ROWSOFFILE").ok() {
+            if val == "1" {
+                println!("ROWS OF FILE: {}", r1);
+            }
         }
-        if env::var("ROWS").unwrap() == "1" {
-            println!("ROWS: {r2}")
+        if let Some(val) = env::var("ROWS").ok() {
+            if val == "1" {
+                println!("ROWS: {}", r2);
+            }
         }
+
     } else if config.file_type=="Markdown" {
         let (results, r1, r2) = if config.ignore_case {
             search_case_insensitive_for_md(&config.query, &contents)
@@ -40,12 +45,17 @@ pub fn run(config : Config) ->Result<(),Box<dyn Error>>{
         for line in results {
             println!("{line}");
         }
-        if env::var("ROWSOFFILE").unwrap() == "1" {
-            println!("ROWS OF FILE: {r1}")
+        if let Some(val) = env::var("ROWSOFFILE").ok() {
+            if val == "1" {
+                println!("ROWS OF FILE: {}", r1);
+            }
         }
-        if env::var("ROWS").unwrap() == "1" {
-            println!("ROWS: {r2}")
+        if let Some(val) = env::var("ROWS").ok() {
+            if val == "1" {
+                println!("ROWS: {}", r2);
+            }
         }
+
     } else {
         eprint!("FILE TYPE NOT SUPPORT");
         process::exit(1);
